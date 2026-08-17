@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GO HUB 2.0 — fanowski portal Pokémon GO">
+<title>GO HUB 2.0 — Pokémon GO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#"><span>⚡</span> GO<span>HUB</span><small>2.0</small></a>
+  <button id="mobileMenu" class="mobile">☰</button>
+  <nav id="navLinks"><a href="#dex">Pokédex</a><a href="#tools">Narzędzia</a><a href="#raids">Raids</a><a href="#pvp">PvP</a><a href="#guides">Poradniki</a></nav>
+  <div class="nav-actions"><button id="theme">☾</button><a class="github" href="https://github.com/" target="_blank">GitHub ↗</a></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">POKÉMON GO • FAN HUB</div>
+    <h1>Twój następny<br><em>legendarny</em> krok.</h1>
+    <p>Pełny Pokédex, typy, statystyki, wyszukiwarka, ewolucje, Raidy, PvP i poradniki — wszystko w jednym miejscu.</p>
+    <div class="buttons"><a class="btn primary" href="#dex">Przeglądaj Pokédex</a><a class="btn ghost" href="#tools">Narzędzia trenera</a></div>
+    <div class="trust"><span>✓</span> szybkie <span>✓</span> mobilne <span>✓</span> GitHub Pages</div>
+  </div>
+  <div class="hero-art"><div class="halo"></div><div class="pokeball"><i></i></div><div class="float f1">⚡</div><div class="float f2">🔥</div><div class="float f3">💧</div></div>
+</section>
+
+<section class="quick">
+  <div><b id="count">1025+</b><span>Pokémonów w danych</span></div><div><b>18</b><span>typów</span></div><div><b>3</b><span>ligi PvP</span></div><div><b>100%</b><span>responsive</span></div>
+</section>
+
+<section id="dex" class="section">
+  <div class="head"><div><label>EXPLORE</label><h2>Pokédex</h2><p>Wczytuj dane automatycznie i znajdź swojego Pokémona.</p></div><div class="search"><span>⌕</span><input id="search" placeholder="Nazwa lub numer..." autocomplete="off"></div></div>
+  <div class="filters" id="filters">
+    <button class="active" data-type="all">Wszystkie</button><button data-type="electric">⚡ Electric</button><button data-type="fire">🔥 Fire</button><button data-type="water">💧 Water</button><button data-type="grass">🌿 Grass</button><button data-type="psychic">🔮 Psychic</button><button data-type="dragon">🐉 Dragon</button>
+  </div>
+  <div id="status" class="status">Ładowanie Pokédexu…</div><div id="grid" class="grid"></div><button id="loadMore" class="load">Pokaż więcej</button>
+</section>
+
+<section id="tools" class="section dark">
+ <div class="head"><div><label>TRAINER TOOLS</label><h2>Narzędzia</h2><p>Małe rzeczy, które robią dużą różnicę.</p></div></div>
+ <div class="tool-grid">
+  <article><span>🧮</span><h3>CP Calculator</h3><p>Porównuj Pokémony i planuj power-upy.</p><button onclick="toast('Kalkulator CP — moduł gotowy do rozbudowy')">Otwórz →</button></article>
+  <article><span>⚔️</span><h3>Type Checker</h3><p>Sprawdź mocne i słabe strony typów.</p><button onclick="toast('Wybierz typ w Pokédexie, aby zacząć')">Sprawdź →</button></article>
+  <article><span>🥚</span><h3>Egg Tracker</h3><p>Zapisuj jajka i dystans potrzebny do wyklucia.</p><button onclick="toast('Egg Tracker — moduł gotowy do rozbudowy')">Otwórz →</button></article>
+  <article><span>⭐</span><h3>Favorites</h3><p>Oznaczaj ulubione Pokémony gwiazdką.</p><button onclick="toast('Kliknij ★ na karcie Pokémona')">Pokaż →</button></article>
+ </div>
+</section>
+
+<section id="raids" class="section">
+ <div class="head"><div><label>BATTLE</label><h2>Raid Center</h2><p>Przygotuj team zanim wejdziesz do walki.</p></div><span class="live">● LIVE SYSTEM</span></div>
+ <div class="raid-grid">
+  <article class="raid r1"><span>5★ LEGENDARY</span><strong>🐉</strong><h3>Legendary Raid</h3><p>Najlepsi kontrujący + komunikacja z ekipą.</p><div>⚔️ 5★ &nbsp; • &nbsp; 👥 Team</div></article>
+  <article class="raid r2"><span>MEGA</span><strong>🔥</strong><h3>Mega Raid</h3><p>Pokonaj bossa i zdobądź Mega Energy.</p><div>⚔️ Mega &nbsp; • &nbsp; 👥 Team</div></article>
+  <article class="raid r3"><span>SHADOW</span><strong>👁️</strong><h3>Shadow Raid</h3><p>Przygotuj Purified Gems i odpowiednie kontry.</p><div>⚔️ Shadow &nbsp; • &nbsp; 👥 Team</div></article>
+ </div>
+</section>
+
+<section id="pvp" class="section dark">
+ <div class="head"><div><label>GO BATTLE LEAGUE</label><h2>PvP Arena</h2><p>Buduj drużyny pod każdą ligę.</p></div></div>
+ <div class="league"><article><b>🥉</b><h3>Great League</h3><p>Limit <strong>1500 CP</strong></p><button onclick="toast('Great League: wybierz Pokémony do 1500 CP')">Meta →</button></article><article><b>🥈</b><h3>Ultra League</h3><p>Limit <strong>2500 CP</strong></p><button onclick="toast('Ultra League: wybierz Pokémony do 2500 CP')">Meta →</button></article><article><b>🥇</b><h3>Master League</h3><p><strong>Bez limitu CP</strong></p><button onclick="toast('Master League: najwyższe statystyki mają znaczenie')">Meta →</button></article></div>
+</section>
+
+<section id="guides" class="section">
+ <div class="head"><div><label>LEARN</label><h2>Poradniki</h2></div></div>
+ <div class="guides"><article><span>🚀</span><h3>Start od zera</h3><p>Najważniejsze rzeczy dla początkującego trenera.</p></article><article><span>🎯</span><h3>Excellent Throws</h3><p>Jak zwiększyć XP i skuteczność łapania.</p></article><article><span>🧬</span><h3>Ewolucje</h3><p>Cukierki, przedmioty i planowanie ewolucji.</p></article><article><span>💪</span><h3>Budowanie teamu</h3><p>Typy, kontry i podstawy strategii.</p></article></div>
+</section>
+</main>
+
+<footer><div class="brand"><span>⚡</span> GO<span>HUB</span></div><p>Fanowski projekt. Nie jest powiązany z Niantic ani The Pokémon Company.</p><small>© 2026 GO HUB 2.0</small></footer>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body></html>
